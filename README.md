@@ -597,6 +597,19 @@ news.html
 games.html
 contact.html
 ```
+```
+Headingstruktur
+
+Jeg testede alle fire sider med HeadingsMap.
+
+Jeg ændrede Marioclub i headeren fra en h1 til almindelig tekst, da den
+fungerer som branding og ikke som sidens hovedoverskrift.
+
+Sidens hovedoverskrift er nu h1 på hver side, mens underliggende
+overskrifter er h2.
+
+Jeg tilpassede efterfølgende CSS'en, så designet blev bevaret.
+```
 
 ---
 
