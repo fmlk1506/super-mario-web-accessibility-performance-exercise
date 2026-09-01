@@ -647,6 +647,17 @@ Der må kun være én aktuel side i denne navigation ad gangen.
 
 > Brug native semantisk HTML først. Tilføj ARIA, når der er et konkret behov.
 
+```
+Løsning
+
+Jeg tilføjede `aria-current="page"` til det aktive navigationslink på hver side.
+
+Det gør, at hjælpemidler som skærmlæsere kan identificere, hvilken side brugeren befinder sig på.
+
+Der er kun ét link med `aria-current="page"` på hver side.
+```
+
+
 ---
 
 # Opgave 8 – Gør formularerne tilgængelige
