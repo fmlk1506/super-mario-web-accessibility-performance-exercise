@@ -170,6 +170,22 @@ form textarea:focus {
 form input:valid {
   border: 4px solid #000000;
 }
+
+form button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 28px;
+  border: 4px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+form button:focus {
+  border: 4px dashed #4b4b4b;
+  outline: none;
+}
+
 input[type="submit"] {
   width: 39rem;
   background-color: red;

@@ -37,64 +37,65 @@
       <article>
         <h2>Get in touch with me, Mario</h2>
         <form>
+          <label for="firstname">First name</label>
           <input
             type="text"
+            id="firstname"
             name="fname"
+            autocomplete="given-name"
             placeholder="Type Firstname"
             required
           />
+
+          <label for="lastname">Last name</label>
           <input
             type="text"
+            id="lastname"
             name="lname"
+            autocomplete="family-name"
             placeholder="Type Lastname"
             required
-          /><br />
-          <input type="email" name="mail" placeholder="Type Email" required />
-          <input list="countries" name="country" id="country" />
-          <datalist id="countries">
-            <option value="Albania"></option>
-            <option value="Austria"></option>
-            <option value="Belarus"></option>
-            <option value="Belgium"></option>
-            <option value="Bosnia"></option>
-            <option value="Bulgaria"></option>
-            <option value="Croatia"></option>
-            <option value="Czech Republic"></option>
-            <option value="Denmark"></option>
-            <option value="Finland"></option>
-            <option value="France"></option>
-            <option value="Georgia"></option>
-            <option value="Germany"></option>
-            <option value="Greece"></option>
-            <option value="Hungary"></option>
-            <option value="Ireland"></option>
-            <option value="Italy"></option>
-            <option value="Kazakhstan"></option>
-            <option value="Lithuania"></option>
-            <option value="Netherlands"></option>
-            <option value="Norway"></option>
-            <option value="Poland"></option>
-            <option value="Portugal"></option>
-            <option value="Romania"></option>
-            <option value="Russia"></option>
-            <option value="Serbia"></option>
-            <option value="Slovakia"></option>
-            <option value="Spain"></option>
-            <option value="Turkey"></option>
-            <option value="Sweden"></option>
-            <option value="Switzerland"></option>
-            <option value="Ukraine"></option>
-            <option value="United Kingdom"></option>
-          </datalist>
+          />
+
           <br />
+
+          <label for="contact-email">Email address</label>
+          <input
+            type="email"
+            id="contact-email"
+            name="mail"
+            autocomplete="email"
+            placeholder="Type Email"
+            required
+          />
+
+          <label for="country">Country</label>
+          <input
+            list="countries"
+            name="country"
+            id="country"
+            autocomplete="country-name"
+          />
+
+          <datalist id="countries">
+              <option value="Albania"></option>
+              <option value="Austria"></option>
+              <option value="Belgium"></option>
+              <option value="United Kingdom"></option>
+          </datalist>
+
+          <br />
+
+          <label for="question">Your question</label>
+
           <textarea
+            id="question"
             name="question"
             rows="4"
             cols="40"
             placeholder="Ask a question..."
-          >
-Ask a question</textarea
-          >
+          ></textarea>
+
           <input type="submit" value="Get in Touch" />
         </form>
       </article>
@@ -122,12 +123,17 @@ Ask a question</textarea
         dignissimos minus voluptatem.
       </p>
       <form>
+        <label for="email">Email address</label>
+
         <input
           type="email"
+          id="email"
           name="email"
-          placeholder="Type email & hit enter"
+          autocomplete="email"
           required
         />
+
+        <button type="submit">Join the club</button>
       </form>
     </section>
     <footer>
