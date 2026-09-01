@@ -366,6 +366,10 @@ Sammenlign originalen og WebP-versionen i browseren.
 
 Hvis kvaliteten ikke er tilfredsstillende, skal du eksportere billedet igen med en højere kvalitetsindstilling.
 
+```
+Resultat: WebP-billederne er sammenlignet med de originale JPG-billeder. Der ses ingen tydelig forskel i billedkvaliteten, og billederne fremstår stadig skarpe uden synlige komprimeringsfejl. WebP-versionerne beholdes derfor.
+```
+
 ---
 
 # Opgave 4 – Opdatér billedreferencer og brug lazy loading med omtanke
