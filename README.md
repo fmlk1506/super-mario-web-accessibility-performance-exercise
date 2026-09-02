@@ -1175,6 +1175,12 @@ og
 noget der kræver menneskelig vurdering
 ```
 
+```
+WAVE viste 1 Alert: “Redundant link”. WAVE markerer det, fordi to links fører til samme URL (index.html). Jeg har valgt ikke at ændre koden, da “Marioclub” i headeren fungerer som et link tilbage til forsiden, mens “Join the club” er en del af navigationen. Alerten er derfor vurderet og kræver ikke nødvendigvis en ændring.
+
+```
+
+
 ---
 
 ## 10.5 – Test også med tastatur
@@ -1214,6 +1220,13 @@ form input:focus {
 Din opgave er derfor at **teste fokusmarkeringen**, ikke blot at fjerne eller erstatte CSS-reglen mekanisk.
 
 Hvis fokus ikke er tydeligt nok, skal du forbedre CSS'en og teste igen.
+
+```
+Resultat:
+Jeg testede alle fire sider med Tab, Shift + Tab og Enter. Alle links, formularfelter og submit-knapper kunne nås og bruges med tastaturet. Fokus fulgte en logisk rækkefølge, og fokusmarkeringen var tydelig. Der var derfor ikke behov for at ændre de eksisterende fokusregler i CSS.
+
+```
+
 
 ---
 
