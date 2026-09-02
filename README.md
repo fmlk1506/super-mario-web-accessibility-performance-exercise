@@ -597,6 +597,7 @@ news.html
 games.html
 contact.html
 ```
+
 ```
 Headingstruktur
 
@@ -656,7 +657,6 @@ Det gør, at hjælpemidler som skærmlæsere kan identificere, hvilken side brug
 
 Der er kun ét link med `aria-current="page"` på hver side.
 ```
-
 
 ---
 
@@ -1093,22 +1093,21 @@ Du skal ikke blot forsøge at få alle markeringer til at forsvinde.
 Undersøg først:
 
 1. Hvad fortæller WAVE?
-WAVE viser, at der ikke er almindelige errors, men at der er 3 kontrastfejl og 1 alert på hver side. Derudover viser WAVE en ARIA-markering.
+   WAVE viser, at der ikke er almindelige errors, men at der er 3 kontrastfejl og 1 alert på hver side. Derudover viser WAVE en ARIA-markering.
 2. Hvilket HTML- eller CSS-element handler markeringen om?
-Kontrastfejlene handler om tekst, hvor kontrasten mellem tekstfarve og baggrundsfarve er for lav.
-Alerten "Redundant link" handler om links, der ligger tæt på hinanden og fører til samme destination.
-ARIA-markeringen handler om `aria-current="page"` på det aktive navigationslink.
+   Kontrastfejlene handler om tekst, hvor kontrasten mellem tekstfarve og baggrundsfarve er for lav.
+   Alerten "Redundant link" handler om links, der ligger tæt på hinanden og fører til samme destination.
+   ARIA-markeringen handler om `aria-current="page"` på det aktive navigationslink.
 3. Hvorfor er det et problem?
-For lav kontrast kan gøre teksten svær at læse, især for brugere med nedsat syn.
-Redundante links kan være unødvendige eller forvirrende for brugere, der navigerer med hjælpemidler.
-`aria-current="page"` er ikke et problem. Det hjælper tværtimod hjælpemidler med at fortælle brugeren, hvilken side der er aktiv.
+   For lav kontrast kan gøre teksten svær at læse, især for brugere med nedsat syn.
+   Redundante links kan være unødvendige eller forvirrende for brugere, der navigerer med hjælpemidler.
+   `aria-current="page"` er ikke et problem. Det hjælper tværtimod hjælpemidler med at fortælle brugeren, hvilken side der er aktiv.
 4. Kræver det faktisk en ændring?
-Kontrastfejlene bør undersøges og sandsynligvis rettes, så teksten får bedre kontrast.
-Alerten om redundant link skal undersøges nærmere, før der ændres noget, fordi en alert ikke nødvendigvis betyder, at der er en fejl.
-ARIA-markeringen kræver ikke en ændring, da `aria-current="page"` er tilføjet med vilje og forbedrer tilgængeligheden.
+   Kontrastfejlene bør undersøges og sandsynligvis rettes, så teksten får bedre kontrast.
+   Alerten om redundant link skal undersøges nærmere, før der ændres noget, fordi en alert ikke nødvendigvis betyder, at der er en fejl.
+   ARIA-markeringen kræver ikke en ændring, da `aria-current="page"` er tilføjet med vilje og forbedrer tilgængeligheden.
 5. Hvordan kan problemet løses uden at ødelægge sidens funktion eller design?
-Kontrastfejlene kan løses ved at justere tekst- eller baggrundsfarverne, så kontrasten bliver højere, men stadig passer til sidens eksisterende design. Alerten om redundant link skal først undersøges, så man kun ændrer det, hvis det faktisk er nødvendigt. aria-current="page" skal bevares, da det forbedrer tilgængeligheden uden at påvirke sidens funktion.
-
+   Kontrastfejlene kan løses ved at justere tekst- eller baggrundsfarverne, så kontrasten bliver højere, men stadig passer til sidens eksisterende design. Alerten om redundant link skal først undersøges, så man kun ændrer det, hvis det faktisk er nødvendigt. aria-current="page" skal bevares, da det forbedrer tilgængeligheden uden at påvirke sidens funktion.
 
 > WAVE er et analyseværktøj – ikke en automatisk facitliste.
 
@@ -1133,7 +1132,6 @@ Når du har rettet problemet, skal du køre WAVE igen.
 WAVE fandt 0 Errors på alle fire sider. Der var derfor ingen Errors, der skulle rettes i denne del af opgaven.
 ```
 
-
 ---
 
 ## 10.3 – Undersøg Contrast Errors
@@ -1153,7 +1151,6 @@ Du skal ikke ændre farver tilfældigt. Brug værktøjets information til at fin
 ```
 WAVE fandt 3 kontrastfejl på alle fire sider. Fejlene var knyttet til hvid tekst på den røde header/footer og den orange baggrund ved sidens hovedoverskrift. Jeg justerede baggrundsfarverne i style.css, så kontrasten blev forbedret, samtidig med at sidens visuelle udtryk blev bevaret. Efter ændringerne viste WAVE 0 Contrast Errors.
 ```
-
 
 ---
 
@@ -1179,7 +1176,6 @@ noget der kræver menneskelig vurdering
 WAVE viste 1 Alert: “Redundant link”. WAVE markerer det, fordi to links fører til samme URL (index.html). Jeg har valgt ikke at ændre koden, da “Marioclub” i headeren fungerer som et link tilbage til forsiden, mens “Join the club” er en del af navigationen. Alerten er derfor vurderet og kræver ikke nødvendigvis en ændring.
 
 ```
-
 
 ---
 
@@ -1227,7 +1223,6 @@ Jeg testede alle fire sider med Tab, Shift + Tab og Enter. Alle links, formularf
 
 ```
 
-
 ---
 
 # Opgave 11 – Kør Lighthouse igen
@@ -1270,19 +1265,25 @@ Du kan eksempelvis bruge denne tabel:
 
 | Side           | Performance før | Performance efter | Accessibility efter |
 | -------------- | --------------: | ----------------: | ------------------: |
-| `index.html`   |                 |                   |                     |
-| `news.html`    |                 |                   |                     |
-| `games.html`   |                 |                   |                     |
-| `contact.html` |                 |                   |                     |
+| `index.html`   |              75 |               100 |                  96 |
+| `news.html`    |              75 |               100 |                  96 |
+| `games.html`   |              75 |                96 |                  96 |
+| `contact.html` |              75 |               100 |                  96 |
 
 Skriv derefter kort:
 
 1. Hvilke ændringer gav den største performanceforbedring?
+   De største performanceforbedringer kom fra optimering af billeder, blandt andet ved at bruge WebP og lazy loading, så siden indlæser færre ressourcer unødvendigt.
 2. Hvilke accessibility-problemer fandt du?
+   Jeg fandt blandt andet problemer med overskriftshierarki, formularlabels, manglende autocomplete, sidernes sprog og titler samt for lav farvekontrast.
 3. Hvilke problemer kunne Lighthouse finde?
+   Lighthouse kunne blandt andet identificere problemer med performance og accessibility, fx kontrast og andre automatiske accessibility-tjek. Testen gav et overblik over, hvilke områder der skulle undersøges nærmere.
 4. Hvilke problemer fandt WAVE?
+   WAVE fandt tre kontrastfejl på siderne samt en alert om redundante links. Kontrastfejlene blev rettet ved at justere farverne, mens det redundante link blev vurderet til ikke at kræve en ændring.
 5. Hvilke problemer krævede HeadingsMap eller manuel kontrol?
+   HeadingsMap blev brugt til at kontrollere overskriftshierarkiet og sikre én korrekt h1 på hver side. Manuel kontrol var nødvendig for at teste tastaturnavigation, fokusmarkering, formularer og vurdere WAVE-alerten.
 6. Hvad har du lært om sammenhængen mellem performance og accessibility?
+   Jeg har lært, at en hjemmeside både skal være hurtig og nem at bruge for forskellige brugere. Automatiske tests kan finde mange problemer, men de kan ikke stå alene. Derfor er det vigtigt at kombinere Lighthouse med værktøjer som WAVE og HeadingsMap samt manuel test.
 
 ---
 
