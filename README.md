@@ -1150,6 +1150,11 @@ Hvis WAVE finder en kontrastfejl:
 
 Du skal ikke ændre farver tilfældigt. Brug værktøjets information til at finde den konkrete CSS-regel, der giver problemet.
 
+```
+WAVE fandt 3 kontrastfejl på alle fire sider. Fejlene var knyttet til hvid tekst på den røde header/footer og den orange baggrund ved sidens hovedoverskrift. Jeg justerede baggrundsfarverne i style.css, så kontrasten blev forbedret, samtidig med at sidens visuelle udtryk blev bevaret. Efter ændringerne viste WAVE 0 Contrast Errors.
+```
+
+
 ---
 
 ## 10.4 – Undersøg Alerts

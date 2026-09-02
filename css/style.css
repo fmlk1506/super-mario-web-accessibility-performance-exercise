@@ -12,7 +12,7 @@ p {
   font-size: 18px;
 }
 header {
-  background-color: #f63232;
+  background-color: #e22e2e;
   padding: 20px 0;
   text-align: center;
   position: fixed;
@@ -35,7 +35,7 @@ header .site-title {
   width: 100%;
 }
 .banner .welcome h1 {
-  background: #feb614;
+  background: #c25500;
   color: white;
   padding: 30px;
   font-size: 60px;
@@ -197,7 +197,7 @@ input[type="submit"]:focus {
   outline: none;
 }
 footer {
-  background: #f63232;
+  background-color: #e22e2e;
   color: white;
   padding: 10px;
   text-align: center;
