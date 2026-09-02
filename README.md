@@ -1129,6 +1129,11 @@ Brug WAVE til at lokalisere det konkrete element, og undersøg derefter HTML-kod
 
 Når du har rettet problemet, skal du køre WAVE igen.
 
+```
+WAVE fandt 0 Errors på alle fire sider. Der var derfor ingen Errors, der skulle rettes i denne del af opgaven.
+```
+
+
 ---
 
 ## 10.3 – Undersøg Contrast Errors
