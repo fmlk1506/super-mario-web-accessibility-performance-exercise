@@ -1093,10 +1093,22 @@ Du skal ikke blot forsøge at få alle markeringer til at forsvinde.
 Undersøg først:
 
 1. Hvad fortæller WAVE?
+WAVE viser, at der ikke er almindelige errors, men at der er 3 kontrastfejl og 1 alert på hver side. Derudover viser WAVE en ARIA-markering.
 2. Hvilket HTML- eller CSS-element handler markeringen om?
+Kontrastfejlene handler om tekst, hvor kontrasten mellem tekstfarve og baggrundsfarve er for lav.
+Alerten "Redundant link" handler om links, der ligger tæt på hinanden og fører til samme destination.
+ARIA-markeringen handler om `aria-current="page"` på det aktive navigationslink.
 3. Hvorfor er det et problem?
+For lav kontrast kan gøre teksten svær at læse, især for brugere med nedsat syn.
+Redundante links kan være unødvendige eller forvirrende for brugere, der navigerer med hjælpemidler.
+`aria-current="page"` er ikke et problem. Det hjælper tværtimod hjælpemidler med at fortælle brugeren, hvilken side der er aktiv.
 4. Kræver det faktisk en ændring?
+Kontrastfejlene bør undersøges og sandsynligvis rettes, så teksten får bedre kontrast.
+Alerten om redundant link skal undersøges nærmere, før der ændres noget, fordi en alert ikke nødvendigvis betyder, at der er en fejl.
+ARIA-markeringen kræver ikke en ændring, da `aria-current="page"` er tilføjet med vilje og forbedrer tilgængeligheden.
 5. Hvordan kan problemet løses uden at ødelægge sidens funktion eller design?
+Kontrastfejlene kan løses ved at justere tekst- eller baggrundsfarverne, så kontrasten bliver højere, men stadig passer til sidens eksisterende design. Alerten om redundant link skal først undersøges, så man kun ændrer det, hvis det faktisk er nødvendigt. aria-current="page" skal bevares, da det forbedrer tilgængeligheden uden at påvirke sidens funktion.
+
 
 > WAVE er et analyseværktøj – ikke en automatisk facitliste.
 
